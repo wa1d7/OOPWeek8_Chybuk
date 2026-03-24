@@ -14,3 +14,11 @@
         parcel1.PrintInfo(); 
         Console.WriteLine($"cost: {parcel1.CalculateCost()} uah"); 
         Console.WriteLine();
+
+        CargoContainer<DeliveryItem> myCargo = new CargoContainer<DeliveryItem>();
+        myCargo.AddItem(letter1);
+        myCargo.AddItem(letter2);
+        myCargo.AddItem(parcel1);
+        myCargo.AddItem(parcel2);
+        Console.WriteLine("total cargo cost");
+        Console.WriteLine($"total: {myCargo.GetTotalCost()} uah"); 
